@@ -18,7 +18,7 @@ const ContactForm = () => {
   
     try {
       const response = await axios.post(
-        'https://script.google.com/macros/s/AKfycbxtVgBgEt-B_vi2Q8H9N3all5Fi04ZWSS2fdS0RRju41Xbkqb5KIu6NTsxgyRr4RrwmpQ/exec', // Replace with your script's URL
+        'https://script.google.com/macros/s/AKfycbyrzCASHYeQy4tI1DrYmqvBLq7k7tGVqiIXuS9HyHYhg4hgaWAlO9P14E9sLB-YxQtv/exec', // Replace with your script's URL
         formData
       );
   

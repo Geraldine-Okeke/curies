@@ -19,7 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://script.google.com/macros/s/AKfycbz.../exec",
+  "proxy": "https://script.google.com/macros/s/AKfycbyrzCASHYeQy4tI1DrYmqvBLq7k7tGVqiIXuS9HyHYhg4hgaWAlO9P14E9sLB-YxQtv/exec",
   "eslintConfig": {
     "extends": [
       "react-app",
