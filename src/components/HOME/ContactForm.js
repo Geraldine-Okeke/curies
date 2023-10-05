@@ -52,7 +52,7 @@ function ContactForm() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="w-full border rounded px-3 py-2"
+              className="w-full border text-black rounded px-3 py-2"
             />
           </div>
           <div>
@@ -64,7 +64,7 @@ function ContactForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full border rounded px-3 py-2"
+              className="w-full  text-black border rounded px-3 py-2"
             />
           </div>
           <div>
@@ -76,7 +76,7 @@ function ContactForm() {
               value={telephone}
               onChange={(e) => setTelephone(e.target.value)}
               required
-              className="w-full border rounded px-3 py-2"
+              className="w-full  text-black border rounded px-3 py-2"
             />
           </div>
         </div>
