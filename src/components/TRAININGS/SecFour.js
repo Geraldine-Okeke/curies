@@ -10,7 +10,7 @@ export default function SecFour() {
   return (
     <>
       <h1 className='text-4xl font-bold text-blue-800 text-center my-8'>THE CURIES</h1>
-      <div className='flex flex-wrap'>
+      <div className='flex flex-wrap px-4'>
         <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 p-2'>
           <img src={cur1} alt='cur' className='w-full h-full object-cover' />
         </div>
