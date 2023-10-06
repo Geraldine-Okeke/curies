@@ -21,12 +21,12 @@ export default function Header() {
     <>
       
       
-        <nav className="bg-blue-500 overflow-visible brightness-200 font-bold text-2xl right-0 top-0 left-0 fixed mx-0 pl-0 z-50 ">
+        <nav className="bg-blue-800 overflow-visible  font-bold text-2xl right-0 top-0 left-0 fixed mx-0 pl-0 z-50 ">
           <div className="max-w-7xl mx-auto flex flex-row justify-between">
             <div className="flex items-center">
               <div className="w-auto flex flex-row overflow-visible">
                 <img className='w-16 h-16' src={cur} alt='curies'/>
-                <div className='flex flex-row md:flex-col font-bold  ' >
+                <div className='flex flex-row md:flex-col font-bold text-white ' >
                   <span>THE CURIES</span>
                   <span className='text-sm whitespace-nowrap'>Research Team</span>
                 </div>
@@ -49,14 +49,14 @@ export default function Header() {
                   onClick={toggleMobileMenu}
                   className={`${
                     isMobileMenuOpen ? 'block' : 'hidden'
-                  } fixed inset-0 w-1/2 bg-blue-500 overflow-visible z-50 justify-between`}
+                  } fixed inset-0 w-1/2 bg-blue-800 overflow-visible z-50 justify-between`}
                 ></div>
                 <div
                   className={`${
                     isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-                  } md:translate-x-0 absolute overflow-visible -top-3 pl-2 justify-between -left-12 h-full pt-2 text-black w-3/4 md:w-auto z-50 transform transition-transform duration-300 ease-in-out md:static  bg-blue-500 md:flex md:space-x-10`}
+                  } md:translate-x-0 absolute overflow-visible -top-3 pl-2 justify-between -left-12 h-full pt-2 text-white w-3/4 md:w-auto z-50 transform transition-transform duration-300 ease-in-out md:static  bg-blue-800 md:flex md:space-x-10`}
                 >
-                  <div className='bg-blue-500  z-50 overflow-visible flex  flex-col md:flex-row'>
+                  <div className='bg-blue-800  z-50 overflow-visible flex  flex-col md:flex-row'>
                     <Link
                       to="/"
                       className="hover:text-gray-900 py-2 block mr-10 "

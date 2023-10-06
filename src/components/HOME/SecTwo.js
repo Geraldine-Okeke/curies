@@ -15,8 +15,9 @@ export default function SecTwo(){
         <Link to='/TRAININGS/Training'>
           <button className="bg-red-800 py-6 rounded-full w-full ">TRAININGS</button>
         </Link>
-        
-        <button className="bg-blue-800 py-6 rounded-full">SCHOLARSHIP UPDATES</button>
+        <Link to='/SCHOLARSHIP/Scholarship'>
+          <button className="bg-blue-800 py-6 rounded-full w-full">SCHOLARSHIP UPDATES</button>
+        </Link>
       </div>
     </div>
     

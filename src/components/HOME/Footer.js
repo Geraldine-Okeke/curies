@@ -19,11 +19,11 @@ export default function Footer(){
           <strong className='text-4xl overflow-visible'>TALK WITH US</strong>
           <hr className='w-1/2 mb-10 mt-2 border border-gray-100 border-b-2'/>
           <div className="flex flex-row my-2">
-            <img className='w-10 h-10' src={call} alt='call'/>
+            <img className='w-5 h-5' src={call} alt='call'/>
             <span>+2349011581000</span>
           </div>
           <div className="flex flex-row">
-            <img className='w-8 h-8 mr-2' src={mail} alt='mail'/>
+            <img className='w-5 h-5 mr-2' src={mail} alt='mail'/>
             <span>ii.ejiofor@unizik.edu.ng</span>
           </div>
           <div className='flex flex-row my-4 gap-3'>
@@ -36,6 +36,16 @@ export default function Footer(){
             <Link>
               <img className='w-5 h-5' src={twit} alt='fbk'/>
             </Link>
+          </div>
+          <div className='flex flex-col mt-5'>
+            <h1 className='font-bold'>Quick Links</h1>
+            <Link className='underline' to='/TRAININGS/Training'>
+              <span>Trainings</span>
+            </Link>
+            <Link className='underline' to='/SCHOLARSHIP/Scholarship'>
+              <span>Scholarship Updates</span>
+            </Link>
+            
           </div>
         </div>
         <div className="w-full md:w-1/2 flex flex-col my-5 bg-blue-800">
