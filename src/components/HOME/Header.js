@@ -73,7 +73,7 @@ export default function Header() {
                     </Link>
                     <Link
                       className="hover:text-gray-900 py-2 block mr-10 "
-                      to="" 
+                      to="/PUZZLES/Puzzles" 
                       
                     >
                       Puzzles

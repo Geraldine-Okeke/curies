@@ -8,7 +8,7 @@ export default function Scholarship(){
     <>
     <Header/>
     <SecOne
-        title = 'TRAININGS'
+        title = 'SCHOLARSHIP UPDATES'
         image ={bg}
         showDetails={false}
         marginTop="mt-20"
