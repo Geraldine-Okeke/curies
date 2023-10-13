@@ -24,7 +24,7 @@ export default function Header() {
         <nav className="bg-blue-800 overflow-visible  font-bold text-2xl right-0 top-0 left-0 fixed mx-0 pl-0 z-50 ">
           <div className="max-w-7xl mx-auto flex flex-row justify-between">
             <div className="flex items-center">
-              <div className="w-auto flex flex-row overflow-visible">
+              <div className="w-auto flex flex-row overflow-visible mt-2">
                 <img className='w-16 h-16' src={cur} alt='curies'/>
                 <div className='flex flex-row md:flex-col font-bold text-white ' >
                   <span>THE CURIES</span>
@@ -35,7 +35,7 @@ export default function Header() {
               <div className="md:hidden">
                 <button
                   onClick={toggleMobileMenu}
-                  className=" absolute right-0 top-0"
+                  className=" absolute right-0 top-2"
                 >
                  <img src={ham} className='w-12 h-8' alt='hamb'/>
                 </button>
@@ -56,42 +56,38 @@ export default function Header() {
                     isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
                   } md:translate-x-0 absolute overflow-visible -top-3 pl-2 justify-between -left-12 h-full pt-2 text-white w-3/4 md:w-auto z-50 transform transition-transform duration-300 ease-in-out md:static  bg-blue-800 md:flex md:space-x-10`}
                 >
-                  <div className='bg-blue-800  z-50 overflow-visible flex  flex-col md:flex-row'>
+                  <div className=' justify-between  z-50 overflow-visible flex  flex-col md:flex-row'>
                     <Link
                       to="/"
-                      className="hover:text-gray-900 py-2 block mr-10 "
+                      className="hover:text-gray-900 py-2 block mr-16 "
                       
                     >
                       Home
                     </Link>
                     <Link
-                      className="hover:text-gray-900 py-2 block mr-10 "
+                      className="hover:text-gray-900 py-2 block mr-16 "
                       to="/ABOUT/About" 
                       
                     >
                       About
                     </Link>
                     <Link
-                      className="hover:text-gray-900 py-2 block mr-10 "
-                      to="/PUZZLES/Puzzles" 
-                      
+                      className="hover:text-gray-900 py-2 block mr-16"
+                      to="/PUZZLES/Puzzles"
+                      onClick={() => {
+                        console.log("Puzzles link clicked");
+                      }}
                     >
                       Puzzles
                     </Link>
                     <Link
                       to="skills"
-                      className="hover:text-gray-900 py-2 block mr-10 "
+                      className="hover:text-gray-900 py-2 block mr-16 "
                       
                     >
                       Publications
                     </Link>
-                    <Link
-                      to="projects"
-                      className="hover:text-gray-900 py-2 block overflow-visible "
-                      
-                    >
-                      Projects
-                    </Link>
+                    
                   </div>
                   
                   
