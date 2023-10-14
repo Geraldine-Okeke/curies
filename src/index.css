@@ -20,3 +20,41 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@keyframes textAnimation {
+  0% {
+    transform: translateX(-100%);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    transform: translateX(0);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    transform: translateX(100%);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  }
+}
+
+.animate-text {
+  animation: textAnimation 4s linear infinite;
+}
+
+@keyframes spanAnimation {
+  0% {
+    transform: translateX(100%);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  }
+  50% {
+    transform: translateX(0);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    transform: translateX(-100%);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.animate-span {
+  animation: spanAnimation 4s linear infinite;
+}
+

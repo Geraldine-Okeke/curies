@@ -11,12 +11,12 @@ export default function SecTwo(){
           Through collaboration and excellence, we shape a brighter future through research
         </p>
       </div>
-      <div className="w-3/4 md:w-1/2 flex flex-col  text-white font-bold gap-6 mt-10">
+      <div className="w-3/4 md:w-1/2 flex flex-col mb-5  text-white font-bold gap-6 mt-10">
         <Link to='/TRAININGS/Training'>
           <button className="bg-red-800 py-6 rounded-full w-full ">TRAININGS</button>
         </Link>
         <Link to='/SCHOLARSHIP/Scholarship'>
-          <button className="bg-blue-800 py-6 rounded-full w-full">SCHOLARSHIP UPDATES</button>
+          <button className="bg-blue-800 py-6 px-4  rounded-full w-full">SCHOLARSHIP UPDATES</button>
         </Link>
       </div>
     </div>

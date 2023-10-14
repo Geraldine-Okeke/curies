@@ -91,7 +91,7 @@ useEffect(() => {
       }
     } else {
       setRemainingChances(remainingChances - 1);
-      setMessage("Try again. You have " + remainingChances + " chances left.");
+      setMessage(`Try again. You have ${remainingChances - 1} chances left.`);
     }
 
     // Clear the input area after processing the guess
@@ -156,7 +156,7 @@ useEffect(() => {
         <strong>Correct Guesses:</strong> {correctGuesses.join(", ")}
       </div>
       <div className="text-xl mt-2">
-        {message && <p>{message}</p>}
+        {message && <p className="text-red-500">{message}</p>}
         {remainingChances > 0 && (
           <p>
             <strong>Remaining Chances:</strong> {remainingChances}

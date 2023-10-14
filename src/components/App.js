@@ -6,6 +6,7 @@ import ScrollToTop from "./ScrollToTop"; // Import ScrollToTop
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AllScholarships from "./SCHOLARSHIP/AllScholarships";
 import Puzzles from "./PUZZLES/Puzzles";
+import Publications from "./PUBLICATIONS/Publications";
 export default function App() {
   return (
     <>
@@ -19,6 +20,7 @@ export default function App() {
           <Route path='/SCHOLARSHIP/Scholarship' element={<Scholarship />} />
           <Route path='/SCHOLARSHIP/AllScholarships' element={<AllScholarships />} />
           <Route path='/PUZZLES/Puzzles' element={<Puzzles/>}/>
+          <Route path= '/PUBLICATIONS/Publications' element={<Publications/>}/>
         </Routes>
       </Router>
     </>

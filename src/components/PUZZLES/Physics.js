@@ -75,7 +75,7 @@ const Physics = () => {
       }
     } else {
       setRemainingChances(remainingChances - 1);
-      setMessage("Try again. You have " + remainingChances + " chances left.");
+      setMessage(`Try again. You have ${remainingChances - 1} chances left.`);
     }
   
     setUserGuess("");
@@ -135,8 +135,8 @@ const Physics = () => {
       <div className="text-xl mt-4">
         <strong>Correct Guesses:</strong> {correctGuesses.join(", ")}
       </div>
-      <div className="text-xl mt-2">
-        {message && <p>{message}</p>}
+      <div className="text-xl mt-2 ">
+        {message && <p className="text-red-500">{message}</p>}
         {remainingChances > 0 && (
           <p>
             <strong>Remaining Chances:</strong> {remainingChances}

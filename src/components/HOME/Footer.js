@@ -45,6 +45,15 @@ export default function Footer(){
             <Link className='underline' to='/SCHOLARSHIP/Scholarship'>
               <span>Scholarship Updates</span>
             </Link>
+            <Link className='underline' to='/PUBLICATIONS/Publications'>
+              <span>Publications</span>
+            </Link>
+            <Link className='underline' to='/ABOUT/About'>
+              <span>About</span>
+            </Link>
+            <Link className='underline' to='/PUZZLES/Puzzles'>
+              <span>Puzzles</span>
+            </Link>
             
           </div>
         </div>

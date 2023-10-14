@@ -26,9 +26,9 @@ export default function Header() {
             <div className="flex items-center">
               <div className="w-auto flex flex-row overflow-visible mt-2">
                 <img className='w-16 h-16' src={cur} alt='curies'/>
-                <div className='flex flex-row md:flex-col font-bold text-white ' >
-                  <span>THE CURIES</span>
-                  <span className='text-sm whitespace-nowrap'>Research Team</span>
+                <div className='flex flex-col md:flex-row font-bold text-white ml-2 whitespace-no-wrap ' >
+                  <span className='text-sm px-2 sm:text-2xl whitespace-nowrap'>THE CURIES</span>
+                  <span className='text-xs  sm:whitespace-nowrap px-2'>Research Team</span>
                 </div>
                 
               </div>
@@ -59,20 +59,20 @@ export default function Header() {
                   <div className=' justify-between  z-50 overflow-visible flex  flex-col md:flex-row'>
                     <Link
                       to="/"
-                      className="hover:text-gray-900 py-2 block mr-16 "
+                      className="hover:text-gray-900 py-2 block ml-20 "
                       
                     >
                       Home
                     </Link>
                     <Link
-                      className="hover:text-gray-900 py-2 block mr-16 "
+                      className="hover:text-gray-900 py-2 block ml-20 "
                       to="/ABOUT/About" 
                       
                     >
                       About
                     </Link>
                     <Link
-                      className="hover:text-gray-900 py-2 block mr-16"
+                      className="hover:text-gray-900 py-2 block ml-20"
                       to="/PUZZLES/Puzzles"
                       onClick={() => {
                         console.log("Puzzles link clicked");
@@ -81,8 +81,8 @@ export default function Header() {
                       Puzzles
                     </Link>
                     <Link
-                      to="skills"
-                      className="hover:text-gray-900 py-2 block mr-16 "
+                      to="/PUBLICATIONS/Publications"
+                      className="hover:text-gray-900 py-2 block ml-20 "
                       
                     >
                       Publications
