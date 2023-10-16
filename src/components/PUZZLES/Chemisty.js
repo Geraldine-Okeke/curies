@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 
 const secretChemistryWords
  = [
@@ -35,6 +35,22 @@ const Chemistry = () => {
   const [message, setMessage] = useState("");
   const [congratulatory, setCongratulatory] = useState(false);
 
+  useEffect(() => {
+    // Load data from localStorage when the component mounts
+    const savedData = localStorage.getItem("ChemistyGame");
+    if (savedData) {
+      const { correctGuesses, remainingChances } = JSON.parse(savedData);
+      setCorrectGuesses(correctGuesses);
+      setRemainingChances(remainingChances);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Save data to localStorage whenever the state changes
+    const dataToSave = JSON.stringify({ correctGuesses, remainingChances });
+    localStorage.setItem("ChemistyGame", dataToSave);
+  }, [correctGuesses, remainingChances]);
+
   const handleGuess = () => {
     const guess = userGuess.toUpperCase();
   
@@ -48,12 +64,10 @@ const Chemistry = () => {
       return;
     }
   
-    if (secretChemistryWords
-      .includes(guess) && !correctGuesses.includes(guess)) {
+    if (secretChemistryWords.includes(guess) && !correctGuesses.includes(guess)) {
       setCorrectGuesses([...correctGuesses, guess]);
   
-      if (correctGuesses.length === secretChemistryWords
-        .length - 1) {
+      if (correctGuesses.length === secretChemistryWords.length - 1) {
         setMessage("Congratulations! You've found all the words!");
         setCongratulatory(true);
       } else {
@@ -64,25 +78,24 @@ const Chemistry = () => {
       setMessage(`Try again. You have ${remainingChances - 1} chances left.`);
     }
   
-    // Clear the input area after processing the guess
     setUserGuess("");
   };
   
-
   const calculateScore = () => {
-    const score = (correctGuesses.length / secretChemistryWords
-    .length) * 100;
+    const score = (correctGuesses.length / secretChemistryWords.length) * 100;
     return score.toFixed(2);
   };
 
-  const resetGame = () => {
-    // Reset the component state
-    setUserGuess("");
+  const refreshGame = () => {
+    localStorage.removeItem("ChemistyGame");
+
     setCorrectGuesses([]);
     setRemainingChances(15);
     setMessage("");
     setCongratulatory(false);
+    setUserGuess("");
   };
+
 
   return (
     <div className="flex flex-col items-center">
@@ -114,7 +127,7 @@ const Chemistry = () => {
           Guess
         </button>
         <button
-          onClick={resetGame}
+          onClick={refreshGame}
           className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700 ml-2"
         >
           Refresh
