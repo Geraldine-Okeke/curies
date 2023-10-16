@@ -6,14 +6,19 @@ function SecThree() {
   const [score, setScore] = useState(null);
   const [submitted, setSubmitted] = useState(false);
 
-  const resetQuiz = () => {
-    // Reset the quiz by clearing answers and score
-    setAnswers(new Array(questions.length).fill(-1));
-    setScore(null);
-    setSubmitted(false);
-  };
-
   useEffect(() => {
+    // Retrieve answers and score from local storage on component mount
+    const savedAnswers = localStorage.getItem('quizAnswers');
+    const savedScore = localStorage.getItem('quizScore');
+
+    if (savedAnswers) {
+      setAnswers(JSON.parse(savedAnswers));
+    }
+
+    if (savedScore) {
+      setScore(parseFloat(savedScore));
+    }
+
     fetch('https://raw.githubusercontent.com/Geraldine-Okeke/scholarships-json/main/riddles.json')
       .then((response) => {
         if (!response.ok) {
@@ -23,19 +28,30 @@ function SecThree() {
       })
       .then((data) => {
         setQuestions(data);
-        // Initialize answers array with -1 (no answer)
-        setAnswers(new Array(data.length).fill(-1));
       })
       .catch((error) => {
         console.error('Error fetching JSON data:', error);
       });
   }, []);
 
+  const resetQuiz = () => {
+    // Reset the quiz by clearing answers and score and removing data from local storage
+    localStorage.removeItem('quizAnswers');
+    localStorage.removeItem('quizScore');
+
+    setAnswers(new Array(questions.length).fill(-1));
+    setScore(null);
+    setSubmitted(false);
+  };
+
   const handleOptionClick = (questionIndex, optionIndex) => {
     if (!submitted) {
       const newAnswers = [...answers];
       newAnswers[questionIndex] = optionIndex;
       setAnswers(newAnswers);
+
+      // Store answers in local storage
+      localStorage.setItem('quizAnswers', JSON.stringify(newAnswers));
     }
   };
 
@@ -51,8 +67,12 @@ function SecThree() {
 
     const percentageScore = (correctAnswers / totalQuestions) * 100;
     setScore(percentageScore);
-    setSubmitted(true); // Mark the quiz as submitted
+    setSubmitted(true);
+
+    // Store the score in local storage
+    localStorage.setItem('quizScore', percentageScore.toString());
   };
+
 
   return (
     <div className="bg-yellow-500 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
