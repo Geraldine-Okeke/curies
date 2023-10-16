@@ -23,15 +23,15 @@ code {
 @keyframes textAnimation {
   0% {
     transform: translateX(-100%);
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    text-shadow: 2px 2px 4px black;
   }
   50% {
     transform: translateX(0);
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    text-shadow: 2px 2px 4px black;
   }
   100% {
     transform: translateX(100%);
-    text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    text-shadow: 0 0 20px black;
   }
 }
 
@@ -42,15 +42,15 @@ code {
 @keyframes spanAnimation {
   0% {
     transform: translateX(100%);
-    text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    text-shadow: 0 0 20px black;
   }
   50% {
     transform: translateX(0);
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    text-shadow: 2px 2px 4px black;
   }
   100% {
     transform: translateX(-100%);
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    text-shadow: 2px 2px 4px black;
   }
 }
 

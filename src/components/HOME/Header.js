@@ -24,9 +24,10 @@ export default function Header() {
           <div className="flex items-center">
             <div className="w-auto flex flex-row overflow-visible mt-2">
               <img className='w-16 h-16' src={cur} alt='curies'/>
-              <div className='flex flex-col md:flex-row font-bold text-white ml-2 whitespace-no-wrap'>
-                <span className='text-sm px-2 sm:text-2xl whitespace-nowrap'>THE CURIES</span>
-                <span className='text-xs  sm:whitespace-nowrap px-2'>Research Team</span>
+              <div className='flex  flex-col  font-bold text-white ml-2 whitespace-no-wrap'>
+                <span className='text-sm px-2 sm:text-2xl whitespace-nowrap overflow-visible'>THE CURIES</span>
+                <span className='text-xs  sm:whitespace-nowrap px-2 '>Research Team</span>
+
               </div>
             </div>
             <div className="md:hidden">
