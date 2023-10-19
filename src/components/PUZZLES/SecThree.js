@@ -35,12 +35,10 @@ function SecThree() {
   }, []);
 
   const resetQuiz = () => {
-    // Reset the quiz by clearing answers and score and removing data from local storage
+    // Reset the quiz by clearing answers but keep the score
     localStorage.removeItem('quizAnswers');
-    localStorage.removeItem('quizScore');
 
     setAnswers(new Array(questions.length).fill(-1));
-    setScore(null);
     setSubmitted(false);
   };
 
@@ -72,7 +70,6 @@ function SecThree() {
     // Store the score in local storage
     localStorage.setItem('quizScore', percentageScore.toString());
   };
-
 
   return (
     <div className="bg-yellow-500 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
@@ -110,6 +107,12 @@ function SecThree() {
               onClick={handleSubmit}
             >
               Submit
+            </button>
+            <button
+              className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded ml-4"
+              onClick={resetQuiz}
+            >
+              Refresh
             </button>
           </div>
         ) : (
