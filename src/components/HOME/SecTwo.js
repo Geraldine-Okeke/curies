@@ -6,7 +6,7 @@ export default function SecTwo(){
       <div className="w-full  md:w-1/2 mt-10 px-2 ">
         <h1 className="text-blue-800 text-4xl font-bold h-auto overflow-visible">OUR MISSION</h1>
         <p className="w-full  md:w-3/4 leading-8 font-semibold ">
-          our mission is to pioneer groundbreaking research, foster innovation, and drive positive change.
+          Our mission is to pioneer groundbreaking research, foster innovation, and drive positive change.
           We are dedicated to advancing knowledge, pushing boundaries and making a lasting impact in our world. 
           Through collaboration and excellence, we shape a brighter future through research
         </p>
