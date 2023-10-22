@@ -19,7 +19,7 @@ function SecThree() {
       setScore(parseFloat(savedScore));
     }
 
-    fetch('https://raw.githubusercontent.com/Geraldine-Okeke/scholarships-json/main/riddles.json')
+    fetch('https://raw.githubusercontent.com/Chikabel/scholarships-json/main/riddles.json')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

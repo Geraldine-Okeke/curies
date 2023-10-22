@@ -7,7 +7,7 @@ const SecTwo = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          'https://raw.githubusercontent.com/Geraldine-Okeke/scholarships-json/main/Publications.json'
+          'https://raw.githubusercontent.com/Chikabel/scholarships-json/main/Publications.json'
         );
         if (!response.ok) {
           throw new Error('Failed to fetch data');
