@@ -4,7 +4,19 @@ import curie from './images/curie.png'
 import SecTwo from './SecOne'
 import cord from './images/cord.png'
 import Footer from "../HOME/Footer"
+import { useEffect,useState } from "react"
+import NetworkError from "../NetworkError"
 export default function About(){
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
+
+  useEffect(() => {
+    // Check the online status and update the state
+    setIsOnline(navigator.onLine);
+  }, []);
+
+  if (!isOnline) {
+    return <NetworkError />; // Display NetworkError component when there is no network
+  }
   return(
     <>
       <Header/>

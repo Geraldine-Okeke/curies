@@ -14,6 +14,9 @@ export default function Publication() {
     setIsOnline(navigator.onLine);
   }, []);
 
+  if (!isOnline) {
+    return <NetworkError />; // Display NetworkError component when there is no network
+  }
   return (
     <>
       <Header />
@@ -25,13 +28,10 @@ export default function Publication() {
         imageWidth="w-1/2"
         imageHeight="h-1/2"
       />
-      {isOnline ? ( // Check if the user is online
-        <>
+      
           <SecTwo />
-        </>
-      ) : (
-        <NetworkError /> // Display NetworkError component when there is no network
-      )}
+      
+     
       <Footer />
     </>
   );
