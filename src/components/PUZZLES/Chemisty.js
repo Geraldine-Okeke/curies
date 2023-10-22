@@ -9,7 +9,7 @@ const secretChemistryWords
   "ATOMIC",
   "EQUATION",
   "SOLVENT",
-  "BIOTECH",
+  "GAS",
   "POLYMER",
   "BONDING",
   "ELEMENTS",
@@ -23,9 +23,9 @@ const grid = [
   ["A", "T", "O", "M", "I", "C", "N", "U", "M", "E"],
   ["M", "O", "L", "E", "C", "U", "L", "E", "S", "N"],
   ["B", "O", "N", "D", "I", "N", "G", "E", "N", "T"],
-  ["C", "O", "M", "P", "O", "U", "N", "D", "I", "N"],
-  ["E", "Q", "U", "A", "T", "I", "O", "N", "R", "T"],
-  ["P", "O", "L", "Y", "M", "E", "R", "R", "M", "A"],
+  ["C", "O", "M", "P", "O", "U", "N", "D", "I", "G"],
+  ["E", "Q", "U", "A", "T", "I", "O", "N", "R", "A"],
+  ["P", "O", "L", "Y", "M", "E", "R", "R", "M", "S"],
 ];
 
 const Chemistry = () => {
