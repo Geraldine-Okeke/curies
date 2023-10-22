@@ -74,7 +74,7 @@ function SecThree() {
   return (
     <div className="bg-yellow-500 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-semibold text-gray-800 mb-4">PUZZLES</h1>
+        <h1 className="text-3xl font-semibold text-gray-800 mb-4 overflow-visible">PUZZLES</h1>
         {!submitted ? (
           <div>
             {questions.map((question, questionIndex) => (
