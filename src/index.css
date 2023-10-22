@@ -36,7 +36,7 @@ code {
 }
 
 .animate-text {
-  animation: textAnimation 4s linear infinite;
+  animation: textAnimation 4s linear;
 }
 
 @keyframes spanAnimation {
@@ -55,7 +55,7 @@ code {
 }
 
 .animate-span {
-  animation: spanAnimation 4s linear infinite;
+  animation: spanAnimation 4s linear ;
 }
 
 @keyframes rotate {
