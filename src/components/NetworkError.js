@@ -18,7 +18,7 @@ const NetworkError = () => {
         />
       </svg>
       <h1 className="text-4xl font-extrabold mb-2">Network Error</h1>
-      <p className="text-lg">
+      <p className="text-lg px-2">
         It seems there's an issue with your network. Please check your internet connection and try again.
       </p>
     </div>
