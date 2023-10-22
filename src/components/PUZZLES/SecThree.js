@@ -5,34 +5,31 @@ function SecThree() {
   const [answers, setAnswers] = useState([]);
   const [score, setScore] = useState(null);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(true);
+
 
   useEffect(() => {
-    // Retrieve answers and score from local storage on component mount
-    const savedAnswers = localStorage.getItem('quizAnswers');
-    const savedScore = localStorage.getItem('quizScore');
-
-    if (savedAnswers) {
-      setAnswers(JSON.parse(savedAnswers));
-    }
-
-    if (savedScore) {
-      setScore(parseFloat(savedScore));
-    }
-
-    fetch('https://raw.githubusercontent.com/Chikabel/scholarships-json/main/riddles.json')
-      .then((response) => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          'https://raw.githubusercontent.com/Chikabel/scholarships-json/main/riddles.json'
+        );
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        return response.json();
-      })
-      .then((data) => {
+  
+        const data = await response.json();
         setQuestions(data);
-      })
-      .catch((error) => {
+        setLoading(false); // Set loading to false once data is loaded
+      } catch (error) {
         console.error('Error fetching JSON data:', error);
-      });
+        setLoading(false); // Set loading to false in case of an error
+      }
+    };
+  
+    fetchData();
   }, []);
+  
 
   const resetQuiz = () => {
     // Reset the quiz by clearing answers but keep the score
@@ -75,7 +72,10 @@ function SecThree() {
     <div className="bg-yellow-500 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-semibold text-gray-800 mb-4 overflow-visible">PUZZLES</h1>
-        {!submitted ? (
+        {loading ? (
+        // Render a loading spinner with the loading-animation class
+        <div className="loading-spinner"></div>
+          ) : !submitted ? (
           <div>
             {questions.map((question, questionIndex) => (
               <div key={questionIndex} className="bg-yellow-100 p-6 rounded shadow-lg mb-4">
