@@ -6,7 +6,7 @@ function SecTwo() {
 
   useEffect(() => {
     
-    const apiUrl = 'https://raw.githubusercontent.com/Geraldine-Okeke/scholarships-json/main/scholarships.json';
+    const apiUrl = 'https://raw.githubusercontent.com/Chikabel/scholarships-json/main/scholarships.json';
 
     fetch(apiUrl)
       .then(response => response.json())
